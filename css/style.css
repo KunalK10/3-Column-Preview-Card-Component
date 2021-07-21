@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+:root {
+    --orange : hsl(31, 77%, 52%);
+    --dark : hsl(184, 100%, 22%);
+    --veryDark : hsl(179, 100%, 13%);
+    --paraColor : hsla(0, 0%, 100%, 0.75);
+    --OtherColor : hsl(0, 0%, 95%)
+}
+
+
+.container {
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #CAD5E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 12px 12px 2px 1px rgba(110, 110, 116, 0.2);
+}
+
+.cards {
+    width: 80%;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #CAD5E2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    padding: 10%;
+}
+
+.img {
+    width: 60px;
+    height: 40px;
+    margin: 10% 0%;
+}
+
+.heading {
+    color: var(--OtherColor);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.info {
+    color: var(--paraColor);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    margin: 10% 0%;
+}
+
+.btn {
+    border-radius: 20px;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 10%;
+    mix-blend-mode: screen;
+}
+
+.btn span {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+.first-card {
+    background-color: var(--orange);
+}
+
+.second-card {
+    background-color: var(--dark);
+}
+
+.third-card {
+    background-color: var(--veryDark);
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+    .cards {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        border-radius: 10px;
+        width: 90%;
+        height: 90vh;
+        background: #fff;
+        box-shadow: none;
+    }
+    .cards {
+        top: 30%;
+        width: 80%;
+        height: 250px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 0.2fr);
+        grid-gap: 15px;
+    }
+}
